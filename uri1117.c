@@ -1,23 +1,57 @@
-#include <stdio.h>
-int main()
-{
-    double a,b,c=0,d=0;
+#include<stdio.h>
+
+int main(){
+
+    int i, j = 0,x; //.... J for array count.....
+
+    float n,N[3],avg;
+
     while(1)
     {
-        if(d==2)
-            break;
-        scanf("%lf", &a);
-        if(a>=0 && a<=10)
-        {
-            d++;
-            c+=a;
+
+
+        while(1){
+
+        scanf("%f",&n);
+
+            if(n>=0 && n<=10){
+
+            N[j]=n;
+
+            j++;
         }
-        else
+
+        else{
+
             printf("nota invalida\n");
+        }
+
+        if(j>1) break; //...break after two input....
+
+        }
+
+        avg = (N[0] + N[1]) / 2.0;
+
+        printf("media = %0.2f\n",avg);
+
+        j=0;
+
+        while(1){
+
+            scanf("%d",&x);
+
+            printf("novo calculo (1-sim 2-nao)\n");
+
+            if(x==1 || x==2)break;
+        }
+
+        if(x==1) continue;
+
+        else break;
     }
-    b=c/2.00;
 
-    printf("media = %.2lf\n", b);
 
-    return 0;
+
+
+return 0;
 }
